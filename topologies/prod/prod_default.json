@@ -1,0 +1,61 @@
+{
+  "name": "prod_default",
+  "version": "0.0.1",
+  "buildstamp": "Version: 0.0.1 Build: 0010003 Time: 2016-02-28T15:50:14.932Z",
+  "buildid": "0010003",
+  "strategy": "via_cookbook",
+  "strategy_data": {
+    "cookbook": "prod_default",
+    "filename": "topology"
+  },
+  "tags": [],
+  "nodes": [
+    {
+      "name": "appserver1456674614918",
+      "node_type": "appserver",
+      "tags": [],
+      "normal": {
+        "topo": {
+          "node_type": "appserver",
+          "name": "prod_default"
+        }
+      },
+      "override": {
+        "testapp": {
+          "version": "1.0.2",
+          "user": "ubuntu",
+          "path": "/var/opt"
+        },
+        "nodejs": {
+          "version": "10.29"
+        }
+      },
+      "run_list": [
+        "recipe[prod_default]",
+        "recipe[testapp::appserver]",
+        "recipe[testapp::deploy]"
+      ]
+    },
+    {
+      "name": "dbserver1456674614921",
+      "node_type": "dbserver",
+      "tags": [],
+      "normal": {
+        "topo": {
+          "node_type": "dbserver",
+          "name": "prod_default"
+        }
+      },
+      "override": {
+        "mongodb": {
+          "package_version": "3.0.8"
+        }
+      },
+      "run_list": [
+        "recipe[prod_default]",
+        "recipe[testapp::db]"
+      ]
+    }
+  ],
+  "services": []
+}
