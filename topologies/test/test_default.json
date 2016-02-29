@@ -1,8 +1,8 @@
 {
   "name": "test_default",
   "version": "0.0.1",
-  "buildstamp": "Version: 0.0.1 Build: 0010003 Time: 2016-02-29T02:04:03.529Z",
-  "buildid": "0010003",
+  "buildstamp": "Version: 0.0.1 Build: 0010004 Time: 2016-02-29T02:06:21.261Z",
+  "buildid": "0010004",
   "strategy": "direct_to_node",
   "chef_environment": "test",
   "tags": [
@@ -12,7 +12,9 @@
     {
       "name": "appserver01",
       "node_type": "appserver",
-      "tags": [],
+      "tags": [
+        "tagtp"
+      ],
       "normal": {
         "topo": {
           "node_type": "appserver",
