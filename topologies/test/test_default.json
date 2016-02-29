@@ -1,8 +1,8 @@
 {
   "name": "test_default",
   "version": "0.0.1",
-  "buildstamp": "Version: 0.0.1 Build: 0010002 Time: 2016-02-28T15:40:11.651Z",
-  "buildid": "0010002",
+  "buildstamp": "Version: 0.0.1 Build: 0010003 Time: 2016-02-29T02:04:03.529Z",
+  "buildid": "0010003",
   "strategy": "direct_to_node",
   "chef_environment": "test",
   "tags": [
@@ -24,7 +24,7 @@
           "version": "1.0.2"
         },
         "nodejs": {
-          "version": "10.28"
+          "version": "10.30"
         }
       },
       "ssh_host": "10.0.1.2",
