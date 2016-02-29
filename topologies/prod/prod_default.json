@@ -1,8 +1,8 @@
 {
   "name": "prod_default",
   "version": "0.0.1",
-  "buildstamp": "Version: 0.0.1 Build: 0010003 Time: 2016-02-28T15:50:14.932Z",
-  "buildid": "0010003",
+  "buildstamp": "Version: 0.0.1 Build: 0010005 Time: 2016-02-29T02:09:59.124Z",
+  "buildid": "0010005",
   "strategy": "via_cookbook",
   "strategy_data": {
     "cookbook": "prod_default",
@@ -22,12 +22,12 @@
       },
       "override": {
         "testapp": {
-          "version": "1.0.2",
+          "version": "1.0.3",
           "user": "ubuntu",
           "path": "/var/opt"
         },
         "nodejs": {
-          "version": "10.29"
+          "version": "10.30"
         }
       },
       "run_list": [

@@ -1,8 +1,8 @@
 {
   "name": "test_default",
   "version": "0.0.1",
-  "buildstamp": "Version: 0.0.1 Build: 0010004 Time: 2016-02-29T02:06:21.261Z",
-  "buildid": "0010004",
+  "buildstamp": "Version: 0.0.1 Build: 0010005 Time: 2016-02-29T02:09:59.635Z",
+  "buildid": "0010005",
   "strategy": "direct_to_node",
   "chef_environment": "test",
   "tags": [
@@ -23,7 +23,7 @@
         "testapp": {
           "user": "ubuntu",
           "path": "/var/opt",
-          "version": "1.0.2"
+          "version": "1.0.3"
         },
         "nodejs": {
           "version": "10.30"
