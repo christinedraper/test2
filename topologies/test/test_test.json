@@ -1,0 +1,62 @@
+{
+  "name": "test_test",
+  "version": "0.0.1",
+  "buildstamp": "Version: 0.0.1 Build: 0010005 Time: 2016-02-29T02:07:05.921Z",
+  "buildid": "0010005",
+  "strategy": "direct_to_node",
+  "chef_environment": "test",
+  "tags": [
+    "test"
+  ],
+  "nodes": [
+    {
+      "name": "appserver01",
+      "node_type": "appserver",
+      "tags": [
+        "tagtp"
+      ],
+      "normal": {
+        "topo": {
+          "node_type": "appserver",
+          "name": "test_test"
+        },
+        "testapp": {
+          "user": "ubuntu",
+          "path": "/var/opt",
+          "version": "1.0.2"
+        },
+        "nodejs": {
+          "version": "10.30"
+        }
+      },
+      "ssh_host": "10.0.1.2",
+      "run_list": [
+        "recipe[apt]",
+        "recipe[testapp::appserver]",
+        "recipe[testapp::deploy]"
+      ]
+    },
+    {
+      "name": "dbserver01",
+      "node_type": "dbserver",
+      "tags": [
+        "testapp_database"
+      ],
+      "normal": {
+        "topo": {
+          "node_type": "dbserver",
+          "name": "test_test"
+        },
+        "mongodb": {
+          "package_version": "3.0.8"
+        }
+      },
+      "ssh_host": "10.0.1.3",
+      "run_list": [
+        "recipe[apt]",
+        "recipe[testapp::db]"
+      ]
+    }
+  ],
+  "services": []
+}
